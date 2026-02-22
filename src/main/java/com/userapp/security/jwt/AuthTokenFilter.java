@@ -28,25 +28,17 @@ public class AuthTokenFilter extends OncePerRequestFilter {
 	private UserDetailsServiceImpl userDetailsService;
 
 	private static final Logger logger = LoggerFactory.getLogger(AuthTokenFilter.class);
-	
-	
-	 @Override
-	    protected boolean shouldNotFilter(HttpServletRequest request) {
-	        String path = request.getRequestURI();
-	        return path.contains("/auth/");  // ✅ skip auth endpoints
-	    }
+
+	@Override
+	protected boolean shouldNotFilter(HttpServletRequest request) {
+		String path = request.getRequestURI();
+		return path.contains("/auth/"); // ✅ skip auth endpoints
+	}
 
 	@Override
 	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
 			throws ServletException, IOException {
-		
-//		String path = request.getRequestURI();
-//
-//		// ✅ Skip JWT check for auth endpoints
-//		if (path.contains("/auth/")) {
-//			filterChain.doFilter(request, response);
-//			return;
-//		}
+
 		try {
 			String jwt = parseJwt(request);
 			if (jwt != null && jwtUtils.validateJwtToken(jwt)) {
