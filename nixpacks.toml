@@ -1,0 +1,9 @@
+[phases.build]
+cmds = ["mvn package -DskipTests"]
+
+[variables]
+PGHOST = "localhost"
+PGPORT = "5432"
+PGDATABASE = "dummy"
+PGUSER = "dummy"
+PGPASSWORD = "dummy"
