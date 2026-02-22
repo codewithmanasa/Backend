@@ -7,9 +7,9 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "roles")
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
+//@Data
+//@NoArgsConstructor
+//@AllArgsConstructor
 public class Role {
     
     @Id
@@ -22,21 +22,21 @@ public class Role {
     
     
     
-//    public Role() {
-//		super();
-//	}
+    public Role() {
+		super();
+	}
 
-//	public Role(ERole name) {
-//        this.name = name;
-//    }
-//
-//	public Long getId() {
-//		return id;
-//	}
-//
-//	public ERole getName() {
-//		return name;
-//	}
-//    
+	public Role(ERole name) {
+        this.name = name;
+    }
+
+	public Long getId() {
+		return id;
+	}
+
+	public ERole getName() {
+		return name;
+	}
+    
     
 }

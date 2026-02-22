@@ -4,8 +4,8 @@ package com.userapp.security.services;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.userapp.model.User;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+//import lombok.AllArgsConstructor;
+//import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -14,7 +14,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Data
+//@Data
 //@AllArgsConstructor
 public class UserDetailsImpl implements UserDetails {
     

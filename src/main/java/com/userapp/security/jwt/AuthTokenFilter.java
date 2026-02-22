@@ -33,13 +33,13 @@ public class AuthTokenFilter extends OncePerRequestFilter {
 	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
 			throws ServletException, IOException {
 		
-		String path = request.getRequestURI();
-
-		// ✅ Skip JWT check for auth endpoints
-		if (path.contains("/auth/")) {
-			filterChain.doFilter(request, response);
-			return;
-		}
+//		String path = request.getRequestURI();
+//
+//		// ✅ Skip JWT check for auth endpoints
+//		if (path.contains("/auth/")) {
+//			filterChain.doFilter(request, response);
+//			return;
+//		}
 		try {
 			String jwt = parseJwt(request);
 			if (jwt != null && jwtUtils.validateJwtToken(jwt)) {
