@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Data
-@AllArgsConstructor
+//@AllArgsConstructor
 public class UserDetailsImpl implements UserDetails {
     
     private static final long serialVersionUID = 1L;
