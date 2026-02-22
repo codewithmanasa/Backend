@@ -48,9 +48,9 @@ public class Item {
     private LocalDateTime updatedAt;
     
 
-	public Item() {
-		super();
-	}
+//	public Item() {
+//		super();
+//	}
 
 	public Item(Long id, @NotBlank @Size(max = 100) String title, @Size(max = 500) String description,
 			Boolean completed, User user, LocalDateTime createdAt, LocalDateTime updatedAt) {

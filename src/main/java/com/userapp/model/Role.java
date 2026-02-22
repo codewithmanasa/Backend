@@ -22,9 +22,9 @@ public class Role {
     
     
     
-    public Role() {
-		super();
-	}
+//    public Role() {
+//		super();
+//	}
 
 	public Role(ERole name) {
         this.name = name;
